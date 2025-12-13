@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | Asafati Gea</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#020617',
+                        secondary: '#2563eb',
+                        glow: '#38bdf8',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        glow: '0 0 40px rgba(56,189,248,0.35)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-inter bg-gradient-to-br from-slate-950 via-slate-900 to-black text-gray-200 overflow-x-hidden">
+
+<!-- NAVBAR -->
+<header class="fixed top-0 w-full z-50 backdrop-blur bg-black/40 border-b border-white/10">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-extrabold tracking-wide text-white">
+            ASAFATI<span class="text-glow">.</span>
+        </h1>
+        <ul class="hidden md:flex gap-8 text-sm uppercase tracking-widest">
+            <li><a href="index.html" class="hover:text-glow">Home</a></li>
+            <li><a href="about.html" class="hover:text-glow">About</a></li>
+            <li><a href="education.html" class="text-glow">Education</a></li>
+            <li><a href="skills.html" class="hover:text-glow">Skills</a></li>
+            <li><a href="projects.html" class="hover:text-glow">Projects</a></li>
+            <li><a href="certificates.html" class="hover:text-glow">Certificates</a></li>
+            <li><a href="contact.html" class="hover:text-glow">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- EDUCATION SECTION -->
+<section class="min-h-screen pt-36 pb-24 px-6 relative">
+    <!-- Background glow -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.12),transparent_45%)]"></div>
+
+    <div class="relative max-w-5xl mx-auto">
+
+        <!-- HEADER -->
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-black text-white mb-4">
+                Education <span class="text-glow">Journey</span>
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+                Latar belakang pendidikan formal dan pengalaman akademik
+                yang membentuk fondasi keilmuan serta pengembangan profesional saya.
+            </p>
+        </div>
+
+        <!-- TIMELINE -->
+        <div class="relative border-l border-white/20 ml-4 space-y-16">
+
+            <!-- ITEM -->
+            <div class="relative pl-10">
+                <span class="absolute -left-[9px] top-2 w-4 h-4 bg-glow rounded-full shadow-glow"></span>
+
+                <div class="bg-white/5 backdrop-blur p-8 rounded-2xl border border-white/10 hover:border-glow transition">
+                    <h3 class="text-2xl font-bold text-white">
+                        Universitas Advent Indonesia
+                    </h3>
+
+                    <p class="text-glow font-semibold mt-1">
+                        Program Studi Sistem Informasi
+                    </p>
+
+                    <p class="text-gray-500 mt-2 text-sm">
+                        2023 – Sekarang
+                    </p>
+
+                    <ul class="mt-5 space-y-3 text-gray-300 leading-relaxed list-disc list-inside">
+                        <li>Mahasiswa aktif Program Studi Sistem Informasi</li>
+                        <li>Fokus pada sistem informasi, teknologi web, dan basis data</li>
+                        <li>Terlibat dalam pengembangan proyek akademik dan organisasi</li>
+                    </ul>
+
+                    <div class="mt-5">
+                        <p class="text-sm text-gray-400">Organisasi Kampus</p>
+                        <p class="text-gray-200 font-semibold">
+                            Himpunan Mahasiswa (HIMA)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEMPLATE TAMBAHAN -->
+            <!--
+            <div class="relative pl-10">
+                <span class="absolute -left-[9px] top-2 w-4 h-4 bg-glow rounded-full shadow-glow"></span>
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+                    <h3 class="text-2xl font-bold">Nama Sekolah</h3>
+                    <p class="text-glow font-semibold">Jurusan</p>
+                    <p class="text-gray-500 text-sm">Tahun</p>
+                </div>
+            </div>
+            -->
+
+        </div>
+
+        <!-- BACK BUTTON -->
+        <div class="text-center mt-20">
+            <a href="index.html"
+               class="inline-block px-10 py-4 rounded-xl font-semibold tracking-wide
+                      bg-glow text-black hover:scale-105 transition shadow-glow">
+                ← Back to Home
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-8 text-center text-gray-500 text-sm bg-black border-t border-white/10">
+    © 2025 Asafati Gea — Education Shapes Excellence
+</footer>
+
+</body>
+</html>
