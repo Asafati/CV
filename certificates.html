@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificates | Asafati Gea</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificates | Asafati Gea</title>
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#020617',
-                        secondary: '#2563eb',
-                        glow: '#38bdf8',
-                    },
-                    fontFamily: {
-                        inter: ['Inter', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        glow: '0 0 40px rgba(56,189,248,0.35)',
-                    }
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#020617',
+                    secondary: '#2563eb',
+                    glow: '#38bdf8',
+                },
+                fontFamily: {
+                    inter: ['Inter', 'sans-serif'],
+                },
+                boxShadow: {
+                    glow: '0 0 40px rgba(56,189,248,0.35)',
                 }
             }
         }
-    </script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    }
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body class="font-inter bg-gradient-to-br from-slate-950 via-slate-900 to-black text-gray-200 overflow-x-hidden">
@@ -38,20 +37,40 @@
         <h1 class="text-xl font-extrabold tracking-wide text-white">
             ASAFATI<span class="text-glow">.</span>
         </h1>
+
+        <!-- Menu Desktop -->
         <ul class="hidden md:flex gap-8 text-sm uppercase tracking-widest">
             <li><a href="index.html" class="hover:text-glow">Home</a></li>
             <li><a href="about.html" class="hover:text-glow">About</a></li>
             <li><a href="education.html" class="hover:text-glow">Education</a></li>
             <li><a href="skills.html" class="hover:text-glow">Skills</a></li>
             <li><a href="projects.html" class="hover:text-glow">Projects</a></li>
-            <li><a href="certificates.html" class="text-glow">Certificates</a></li>
+            <li><a href="certificates.html" class="text-glow font-semibold">Certificates</a></li>
             <li><a href="contact.html" class="hover:text-glow">Contact</a></li>
         </ul>
+
+        <!-- Hamburger Menu Mobile -->
+        <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2">
+            <span class="w-6 h-0.5 bg-white"></span>
+            <span class="w-6 h-0.5 bg-white"></span>
+            <span class="w-6 h-0.5 bg-white"></span>
+        </button>
     </nav>
+
+    <!-- Menu Mobile -->
+    <ul id="mobile-menu" class="hidden flex-col gap-4 px-6 pb-4 bg-black/80 border-t border-white/10 md:hidden">
+        <li><a href="index.html" class="block py-2 text-white hover:text-glow">Home</a></li>
+        <li><a href="about.html" class="block py-2 text-white hover:text-glow">About</a></li>
+        <li><a href="education.html" class="block py-2 text-white hover:text-glow">Education</a></li>
+        <li><a href="skills.html" class="block py-2 text-white hover:text-glow">Skills</a></li>
+        <li><a href="projects.html" class="block py-2 text-white hover:text-glow">Projects</a></li>
+        <li><a href="certificates.html" class="block py-2 text-white font-semibold">Certificates</a></li>
+        <li><a href="contact.html" class="block py-2 text-white hover:text-glow">Contact</a></li>
+    </ul>
 </header>
 
 <!-- CERTIFICATES -->
-<section class="min-h-screen pt-36 pb-24 px-6 relative">
+<section class="min-h-screen pt-32 pb-24 px-6 relative">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(56,189,248,0.18),transparent_45%)]"></div>
 
     <div class="relative max-w-7xl mx-auto">
@@ -141,6 +160,16 @@
 <footer class="py-8 text-center text-gray-500 text-sm bg-black border-t border-white/10">
     © 2025 Asafati Gea — Continuous Learning & Growth
 </footer>
+
+<!-- SCRIPT HAMBURGER -->
+<script>
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
 
 </body>
 </html>
