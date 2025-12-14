@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Asafati Gea</title>
 
-    <!-- Tailwind CDN -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -28,50 +28,56 @@
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-</head>
 
+    <style>
+        .text-glow { color: #38bdf8; }
+    </style>
+</head>
 <body class="font-inter bg-gradient-to-br from-slate-950 via-slate-900 to-black text-gray-200 overflow-x-hidden">
 
 <!-- NAVBAR -->
 <header class="fixed top-0 w-full z-50 backdrop-blur bg-black/40 border-b border-white/10">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 class="text-xl font-extrabold tracking-wide text-white">
-            My <span class="text-glow">Curriculum Vitae</span>
-        </h1>
+<nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-extrabold tracking-wide text-white">
+        My <span class="text-glow">Curriculum Vitae</span>
+    </h1>
 
-        <!-- Menu Desktop -->
-        <ul class="hidden md:flex gap-8 text-sm uppercase tracking-widest">
-            <li><a href="index.html" class="hover:text-glow">Home</a></li>
-            <li><a href="about.html" class="hover:text-glow">About</a></li>
-            <li><a href="education.html" class="hover:text-glow">Education</a></li>
-            <li><a href="skills.html" class="hover:text-glow">Skills</a></li>
-            <li><a href="projects.html" class="hover:text-glow">Projects</a></li>
-            <li><a href="certificates.html" class="hover:text-glow">Certificates</a></li>
-            <li><a href="contact.html" class="hover:text-glow">Contact</a></li>
-        </ul>
-
-        <!-- Hamburger Menu Mobile -->
-        <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2">
-            <span class="w-6 h-0.5 bg-white"></span>
-            <span class="w-6 h-0.5 bg-white"></span>
-            <span class="w-6 h-0.5 bg-white"></span>
-        </button>
-    </nav>
-
-    <!-- Menu Mobile -->
-    <ul id="mobile-menu" class="hidden flex-col gap-4 px-6 pb-4 bg-black/80 border-t border-white/10 md:hidden">
-        <li><a href="index.html" class="block py-2 text-white hover:text-glow">Home</a></li>
-        <li><a href="about.html" class="block py-2 text-white hover:text-glow">About</a></li>
-        <li><a href="education.html" class="block py-2 text-white hover:text-glow">Education</a></li>
-        <li><a href="skills.html" class="block py-2 text-white hover:text-glow">Skills</a></li>
-        <li><a href="projects.html" class="block py-2 text-white hover:text-glow">Projects</a></li>
-        <li><a href="certificates.html" class="block py-2 text-white hover:text-glow">Certificates</a></li>
-        <li><a href="contact.html" class="block py-2 text-white hover:text-glow">Contact</a></li>
+    <!-- Menu Desktop -->
+    <ul class="hidden md:flex gap-8 text-sm uppercase tracking-widest items-center">
+        <li><a href="index.html" class="hover:text-glow">Home</a></li>
+        <li><a href="about.html" class="hover:text-glow">About</a></li>
+        <li><a href="education.html" class="hover:text-glow">Education</a></li>
+        <li><a href="experience.html" class="hover:teks-glow">Experience</a></li>
+        <li><a href="skills.html" class="hover:text-glow">Skills</a></li>
+        <li><a href="projects.html" class="hover:text-glow">Projects</a></li>
+        <li><a href="certificates.html" class="hover:text-glow">Certificates</a></li>
+        <li><a href="contact.html" class="hover:text-glow">Contact</a></li>
     </ul>
+
+    <!-- Hamburger Menu Mobile -->
+    <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2">
+        <span class="w-6 h-0.5 bg-white"></span>
+        <span class="w-6 h-0.5 bg-white"></span>
+        <span class="w-6 h-0.5 bg-white"></span>
+    </button>
+</nav>
+
+
+<!-- Mobile Menu -->
+<ul id="mobile-menu" class="hidden flex-col gap-4 px-6 pb-4 bg-black/80 border-t border-white/10 md:hidden">
+    <li><a href="index.html" class="block py-2 hover:text-glow">Home</a></li>
+    <li><a href="about.html" class="block py-2 hover:text-glow">About</a></li>
+    <li><a href="education.html" class="block py-2 hover:text-glow">Education</a></li>
+    <li><a href="experience.html" class="block py-2 hover:text-glow font-bold text-glow">Experience</a></li>
+    <li><a href="skills.html" class="block py-2 hover:text-glow">Skills</a></li>
+    <li><a href="projects.html" class="block py-2 hover:text-glow">Projects</a></li>
+    <li><a href="certificates.html" class="block py-2 hover:text-glow">Certificates</a></li>
+    <li><a href="contact.html" class="block py-2 hover:text-glow">Contact</a></li>
+</ul>
 </header>
 
-<!-- PROJECTS -->
-<section class="min-h-screen pt-36 pb-24 px-6 relative">
+<!-- PROJECTS SECTION -->
+<section class="min-h-screen pt-44 pb-24 px-6 relative">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.15),transparent_45%)]"></div>
 
     <div class="relative max-w-7xl mx-auto">
@@ -82,46 +88,30 @@
                 Selected <span class="text-glow">Projects</span>
             </h2>
             <p class="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
-                A collection of academic and personal projects focused on data analysis,
-                information systems, and decision support. These projects demonstrate my
-                ability to transform data into insights and structured digital solutions.
+                Academic and personal projects in data analysis, information systems, and decision support.
             </p>
         </div>
 
-        <!-- PROJECT GRID -->
+        <!-- GRID -->
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
 
             <!-- PROJECT 1 -->
             <div class="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-glow transition">
                 <div class="relative overflow-hidden">
-                    <img src="img/projects/cv.png" alt="CV Website"
-                         class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
+                    <img src="img/projects/cv.png" alt="CV Website" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition"></div>
                 </div>
-
                 <div class="p-8">
-                    <h3 class="text-2xl font-bold text-white mb-3">
-                        Personal Information System Portfolio
-                    </h3>
-
+                    <h3 class="text-2xl font-bold text-white mb-3">Personal Information System Portfolio</h3>
                     <p class="text-gray-400 mb-6 leading-relaxed">
-                        A personal information system designed to organize and present academic,
-                        technical, and analytical data in a structured format. This project focuses
-                        on clarity of information, usability, and data-driven presentation rather
-                        than visual design alone.
+                        Personal CV & portfolio website designed as an information system to present structured academic and technical data.
                     </p>
-
                     <div class="flex flex-wrap gap-2 mb-6">
                         <span class="px-3 py-1 text-sm bg-white/10 rounded-full">HTML</span>
                         <span class="px-3 py-1 text-sm bg-white/10 rounded-full">Tailwind CSS</span>
                         <span class="px-3 py-1 text-sm bg-white/10 rounded-full">JavaScript</span>
-                        <span class="px-3 py-1 text-sm bg-white/10 rounded-full">Information Architecture</span>
                     </div>
-
-                    <a href="https://github.com/Asafati"
-                       target="_blank"
-                       class="inline-block px-6 py-3 rounded-xl font-semibold
-                              bg-glow text-black hover:scale-105 transition shadow-glow">
+                    <a href="https://github.com/Asafati" target="_blank" class="inline-block px-6 py-3 rounded-xl font-semibold bg-glow text-black hover:scale-105 transition shadow-glow">
                         View on GitHub →
                     </a>
                 </div>
@@ -129,78 +119,68 @@
 
             <!-- PROJECT 2 -->
             <div class="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-glow transition">
-                <div class="flex items-center justify-center h-64 text-gray-500 text-lg tracking-widest">
-                    COMING SOON
-                </div>
-
+                <div class="flex items-center justify-center h-64 text-gray-500 text-lg tracking-widest">COMING SOON</div>
                 <div class="p-8">
-                    <h3 class="text-2xl font-bold text-white mb-3">
-                        Academic Data Management & Reporting System
-                    </h3>
-
+                    <h3 class="text-2xl font-bold text-white mb-3">Academic Data Management System</h3>
                     <p class="text-gray-400 mb-6 leading-relaxed">
-                        A conceptual web-based information system focused on managing structured
-                        academic data, generating reports, and supporting basic decision-making
-                        processes. The project emphasizes database design, data flow, and reporting
-                        logic.
+                        Conceptual web-based system focusing on database design and reporting logic.
                     </p>
-
                     <div class="flex flex-wrap gap-2 mb-6">
                         <span class="px-3 py-1 text-sm bg-white/10 rounded-full">PHP</span>
                         <span class="px-3 py-1 text-sm bg-white/10 rounded-full">MySQL</span>
                         <span class="px-3 py-1 text-sm bg-white/10 rounded-full">Database Design</span>
-                        <span class="px-3 py-1 text-sm bg-white/10 rounded-full">Reporting Logic</span>
                     </div>
-
-                    <span class="inline-block px-6 py-3 rounded-xl bg-white/10 text-gray-500 cursor-not-allowed">
-                        Private Repository
-                    </span>
+                    <span class="inline-block px-6 py-3 rounded-xl bg-white/10 text-gray-500 cursor-not-allowed">Private Repository</span>
                 </div>
             </div>
 
-            <!-- PROJECT 3 (FUTURE SLOT) -->
-            <div class="group bg-white/5 border border-dashed border-white/20 rounded-3xl flex items-center justify-center text-center p-12">
+            <!-- PROJECT 3 -->
+            <div class="bg-white/5 border border-dashed border-white/20 rounded-3xl flex items-center justify-center text-center p-12">
                 <div>
-                    <h3 class="text-xl font-bold text-white mb-3">
-                        Data Analysis Case Study
-                    </h3>
-                    <p class="text-gray-400">
-                        Planned project focusing on data cleaning, exploratory data analysis,
-                        and insight generation using real or simulated datasets as part of
-                        academic and self-learning development.
-                    </p>
+                    <h3 class="text-xl font-bold text-white mb-3">Data Analysis Case Study</h3>
+                    <p class="text-gray-400">Planned project focusing on EDA, data cleaning, and insight generation.</p>
                 </div>
             </div>
 
         </div>
-        Focus area: Data Analysis • Information Systems • Decision Support
+
+        <p class="text-center text-gray-500 mt-16">Focus Area: Data Analysis • Information Systems • Decision Support</p>
 
         <!-- BACK -->
         <div class="text-center mt-24">
-            <a href="index.html"
-               class="inline-block px-10 py-4 rounded-xl font-semibold tracking-wide
-                      bg-glow text-black hover:scale-105 transition shadow-glow">
+            <a href="index.html" class="inline-block px-10 py-4 rounded-xl font-semibold bg-glow text-black hover:scale-105 transition shadow-glow">
                 ← Back to Home
             </a>
         </div>
-
     </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="py-8 text-center text-gray-500 text-sm bg-black border-t border-white/10">
+<footer class="py-8 text-center text-gray-500 text-sm border-t border-white/10">
     © 2025 Asafati Gea — Building Digital Impact
 </footer>
 
-<!-- SCRIPT HAMBURGER -->
+<!-- SCRIPT -->
 <script>
-    const mobileBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+    document.getElementById('mobile-menu-btn').onclick = () =>
+        document.getElementById('mobile-menu').classList.toggle('hidden');
 
-    mobileBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,id,zh-CN,iw',
+            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+        }, 'google_translate_element');
+    }
 </script>
 
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
+<!-- GOOGLE TRANSLATE BAR -->
+    <div class="w-full border-t border-white/10 bg-black/60">
+        <div class="max-w-7xl mx-auto px-6 py-2 flex justify-end">
+            <div id="google_translate_element"></div>
+        </div>
+    </div>
 </html>
