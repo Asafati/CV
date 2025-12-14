@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,144 +28,360 @@
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- GOOGLE TRANSLATE STYLE FIX -->
+    <style>
+    /* Style dropdown translate */
+    .goog-te-gadget {
+        color: #e5e7eb !important;
+    }
+
+    .goog-te-gadget select {
+        background: rgba(37, 99, 235, 0.1);
+        color: #38bdf8;
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        padding: 8px 14px;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .goog-te-gadget select:hover {
+        background: rgba(37, 99, 235, 0.2);
+        border-color: #38bdf8;
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+    }
+
+    /* Sembunyikan logo & teks Google */
+    .goog-logo-link,
+    .goog-te-gadget span {
+        display: none !important;
+    }
+
+    /* SEMBUNYIKAN banner translate BESAR */
+    .goog-te-banner-frame {
+        display: none !important;
+    }
+
+    /* Cegah halaman turun */
+    body {
+        top: 0 !important;
+        position: static !important;
+    }
+
+    /* Language selector icon */
+    .language-selector::before {
+        content: "🌐";
+        margin-right: 8px;
+        font-size: 16px;
+    }
+
+    /* Smooth scroll */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Navigation hover effect */
+    .nav-link {
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #38bdf8, #2563eb);
+        transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    /* Mobile menu animation */
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    #mobile-menu.show {
+        animation: slideDown 0.3s ease;
+    }
+
+    /* Glass effect for header */
+    .glass-effect {
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    /* Badge style */
+    .status-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(37, 99, 235, 0.2));
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #38bdf8;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            box-shadow: 0 0 5px rgba(56, 189, 248, 0.3);
+        }
+        50% {
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+        }
+    }
+
+    /* Social icons hover */
+    .social-icon {
+        transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+        transform: translateY(-3px);
+        filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.8));
+    }
+</style>
+
 </head>
 
 <body class="font-inter bg-gradient-to-br from-slate-950 via-slate-900 to-black text-gray-200 overflow-x-hidden">
 
-<!-- NAVBAR -->
-<header class="fixed top-0 w-full z-50 backdrop-blur bg-black/40 border-b border-white/10">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 class="text-xl font-extrabold tracking-wide text-white">
-            My <span class="text-glow">Curriculum Vitae</span>
-        </h1>
+<!-- NAVBAR - ENHANCED PROFESSIONAL VERSION -->
+<header class="fixed top-0 w-full z-50 glass-effect border-b border-white/10">
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+        <!-- Logo with Badge -->
+        <div class="flex items-center gap-3">
+            <h1 class="text-2xl font-extrabold tracking-wide text-white flex items-center gap-2">
+                <span class="text-glow">AG</span>
+                <span class="text-gray-400 text-lg">|</span>
+                <span class="text-sm font-normal text-gray-300">Curriculum Vitae</span>
+            </h1>
+            <span class="status-badge hidden lg:inline-block">Available for Work</span>
+        </div>
 
         <!-- Menu Desktop -->
-        <ul class="hidden md:flex gap-8 text-sm uppercase tracking-widest">
-            <li><a href="index.html" class="hover:text-glow">Home</a></li>
-            <li><a href="about.html" class="hover:text-glow">About</a></li>
-            <li><a href="education.html" class="hover:text-glow">Education</a></li>
-            <li><a href="skills.html" class="hover:text-glow">Skills</a></li>
-            <li><a href="projects.html" class="hover:text-glow">Projects</a></li>
-            <li><a href="certificates.html" class="hover:text-glow">Certificates</a></li>
-            <li><a href="contact.html" class="hover:text-glow">Contact</a></li>
+        <ul class="hidden lg:flex gap-8 text-sm font-semibold tracking-wider">
+            <li><a href="index.html" class="nav-link hover:text-glow">Home</a></li>
+            <li><a href="about.html" class="nav-link hover:text-glow">About</a></li>
+            <li><a href="education.html" class="nav-link hover:text-glow">Education</a></li>
+            <li><a href="skills.html" class="nav-link hover:text-glow">Skills</a></li>
+            <li><a href="projects.html" class="nav-link hover:text-glow">Projects</a></li>
+            <li><a href="certificates.html" class="nav-link hover:text-glow">Certificates</a></li>
+            <li><a href="contact.html" class="nav-link hover:text-glow">Contact</a></li>
         </ul>
 
-        <!-- Hamburger Menu Mobile -->
-        <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2">
-            <span class="w-6 h-0.5 bg-white"></span>
-            <span class="w-6 h-0.5 bg-white"></span>
-            <span class="w-6 h-0.5 bg-white"></span>
+        <!-- Right side: Language & Social -->
+        <div class="hidden lg:flex items-center gap-4">
+            <!-- Social Icons -->
+            <div class="flex items-center gap-3 pr-4 border-r border-white/20">
+                <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">
+                    <svg class="w-5 h-5 text-gray-400 hover:text-glow" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com" target="_blank" class="social-icon" title="GitHub">
+                    <svg class="w-5 h-5 text-gray-400 hover:text-glow" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="mailto:2382006@unai.edu" class="social-icon" title="Email">
+                    <svg class="w-5 h-5 text-gray-400 hover:text-glow" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Language Selector -->
+            <div class="language-selector flex items-center" id="google_translate_element"></div>
+        </div>
+
+        <!-- Hamburger -->
+        <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2 hover:bg-white/10 rounded-lg transition">
+            <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+            <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+            <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
         </button>
     </nav>
 
-    <!-- Menu Mobile -->
-    <ul id="mobile-menu" class="hidden flex-col gap-4 px-6 pb-4 bg-black/80 border-t border-white/10 md:hidden">
-        <li><a href="index.html" class="block py-2 text-white hover:text-glow">Home</a></li>
-        <li><a href="about.html" class="block py-2 text-white hover:text-glow">About</a></li>
-        <li><a href="education.html" class="block py-2 text-white hover:text-glow">Education</a></li>
-        <li><a href="skills.html" class="block py-2 text-white hover:text-glow">Skills</a></li>
-        <li><a href="projects.html" class="block py-2 text-white hover:text-glow">Projects</a></li>
-        <li><a href="certificates.html" class="block py-2 text-white hover:text-glow">Certificates</a></li>
-        <li><a href="contact.html" class="block py-2 text-white hover:text-glow">Contact</a></li>
+    <!-- Mobile Menu -->
+    <ul id="mobile-menu" class="hidden flex-col gap-2 px-6 pb-6 bg-black/90 border-t border-white/10 lg:hidden">
+        <li class="py-1"><span class="status-badge">Available for Work</span></li>
+        <li><a href="index.html" class="block py-3 px-4 hover:bg-white/5 rounded-lg hover:text-glow transition">Home</a></li>
+        <li><a href="about.html" class="block py-3 px-4 hover:bg-white/5 rounded-lg hover:text-glow transition">About</a></li>
+        <li><a href="education.html" class="block py-3 px-4 hover:bg-white/5 rounded-lg hover:text-glow transition">Education</a></li>
+        <li><a href="skills.html" class="block py-3 px-4 hover:bg-white/5 rounded-lg hover:text-glow transition">Skills</a></li>
+        <li><a href="projects.html" class="block py-3 px-4 hover:bg-white/5 rounded-lg hover:text-glow transition">Projects</a></li>
+        <li><a href="certificates.html" class="block py-3 px-4 hover:bg-white/5 rounded-lg hover:text-glow transition">Certificates</a></li>
+        <li><a href="contact.html" class="block py-3 px-4 hover:bg-white/5 rounded-lg hover:text-glow transition">Contact</a></li>
+        
+        <!-- Social & Language in Mobile -->
+        <li class="pt-4 border-t border-white/10 mt-2">
+            <div class="flex justify-between items-center">
+                <div class="flex gap-4">
+                    <a href="https://linkedin.com" target="_blank" class="social-icon">
+                        <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="social-icon">
+                        <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:2382006@unai.edu" class="social-icon">
+                        <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div id="google_translate_element_mobile"></div>
+            </div>
+        </li>
     </ul>
 </header>
 
 <!-- HERO -->
-<section class="min-h-screen flex items-center justify-center relative pt-32 px-6">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(56,189,248,0.15),transparent_40%)]"></div>
-
+<section class="min-h-screen flex items-center justify-center relative pt-44 px-6">
     <div class="relative max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-        <!-- TEXT -->
         <div class="space-y-8">
-            <h2 class="text-5xl lg:text-7xl font-black leading-tight text-white">
-                Asafati <span class="text-white">Gea</span>
+            <h2 class="text-5xl lg:text-7xl font-black text-white">
+                Asafati Gea
             </h2>
 
-            <p class="text-xl tracking-wide text-glow font-semibold">
+            <p class="text-xl text-glow font-semibold">
                 Information Systems Undergraduate • Data Analyst Focus
             </p>
 
-            <p class="text-gray-400 max-w-xl leading-relaxed">
+            <p class="text-gray-400 max-w-xl">
                 An undergraduate Information Systems student with a strong interest in data analysis,
-                information processing, and data-driven decision making. Experienced in working with
-                structured data, system logic, and analytical approaches to support organizational
-                and business needs.
+                information processing, and data-driven decision making.
             </p>
 
-            <div class="flex gap-6 flex-wrap">
-                <a href="projects.html"
-                   class="px-8 py-4 bg-secondary text-white font-bold rounded-xl shadow-glow hover:scale-105 transition">
+            <div class="flex gap-6">
+                <a href="projects.html" class="px-8 py-4 bg-secondary rounded-xl font-bold shadow-glow hover:scale-105 transition-transform">
                     View Projects
                 </a>
-                <a href="contact.html"
-                   class="px-8 py-4 border border-glow text-glow font-bold rounded-xl hover:bg-glow/10 transition">
+                <a href="contact.html" class="px-8 py-4 border border-glow text-glow rounded-xl hover:bg-glow/10 transition">
                     Contact Me
                 </a>
             </div>
         </div>
 
-        <!-- PHOTO -->
-        <div class="relative flex justify-center">
-            <div class="absolute w-80 h-80 bg-glow/30 blur-3xl rounded-full"></div>
+        <div class="flex justify-center">
             <img src="img/profil1.jpeg"
-                 class="relative w-72 h-72 rounded-full object-cover border-4 border-glow shadow-glow hover:scale-105 transition duration-500"
+                 class="w-72 h-72 rounded-full object-cover border-4 border-glow shadow-glow"
                  alt="Asafati Gea">
         </div>
-
     </div>
 </section>
 
-<!-- IDENTITY SECTION -->
-<section class="py-24 bg-black/60 backdrop-blur">
+<!-- IDENTITY -->
+<section class="py-24 bg-black/60">
     <div class="max-w-5xl mx-auto px-6">
-        <h3 class="text-4xl font-extrabold text-center mb-16 text-white">
-            Digital Identity
-        </h3>
+        <h3 class="text-4xl font-extrabold text-center mb-16">Digital Identity</h3>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-            <div class="p-6 rounded-2xl bg-white/5 border-l-4 border-white/20 hover:border-glow transition flex flex-col">
-                <h4 class="text-glow font-bold mb-2">Full Nama</h4>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+            <div class="p-6 bg-white/5 rounded-xl hover:bg-white/10 transition">
+                <h4 class="text-glow font-bold">Full Name</h4>
                 <p>Asafati Gea</p>
             </div>
-            <div class="p-6 rounded-2xl bg-white/5 border-l-4 border-white/20 hover:border-glow transition flex flex-col">
-                <h4 class="text-glow font-bold mb-2">Date of Birth</h4>
+            <div class="p-6 bg-white/5 rounded-xl hover:bg-white/10 transition">
+                <h4 class="text-glow font-bold">Date of Birth</h4>
                 <p>Sihare'o, January 26, 2001</p>
             </div>
-            <div class="p-6 rounded-2xl bg-white/5 border-l-4 border-white/20 hover:border-glow transition flex flex-col">
-                <h4 class="text-glow font-bold mb-2">Location</h4>
+            <div class="p-6 bg-white/5 rounded-xl hover:bg-white/10 transition">
+                <h4 class="text-glow font-bold">Location</h4>
                 <p>West Bandung, West Java, Indonesia</p>
             </div>
-            <div class="p-6 rounded-2xl bg-white/5 border-l-4 border-white/20 hover:border-glow transition flex flex-col">
-                <h4 class="text-glow font-bold mb-2">Email</h4>
+            <div class="p-6 bg-white/5 rounded-xl hover:bg-white/10 transition">
+                <h4 class="text-glow font-bold">Email</h4>
                 <p>2382006@unai.edu</p>
-            </div>      
-            <div class="p-6 rounded-2xl bg-white/5 border-l-4 border-white/20 hover:border-glow transition flex flex-col">
-                <h4 class="text-glow font-bold mb-2">Phone</h4>
+            </div>
+            <div class="p-6 bg-white/5 rounded-xl hover:bg-white/10 transition">
+                <h4 class="text-glow font-bold">Phone</h4>
                 <p>0821-6571-3526</p>
             </div>
-            <div class="p-6 rounded-2xl bg-white/5 border-l-4 border-white/20 hover:border-glow transition flex flex-col">
-                <h4 class="text-glow font-bold mb-2">Academic Status</h4>
-                <p>Undergraduate Student — Data Analysis Focus/p>
+            <div class="p-6 bg-white/5 rounded-xl hover:bg-white/10 transition">
+                <h4 class="text-glow font-bold">Academic Status</h4>
+                <p>Undergraduate Student — Data Analysis Focus</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="py-8 text-center text-gray-500 text-sm bg-black border-t border-white/10">
-      © 2025 Asafati Gea — Data-Driven Digital Identity
+<footer class="py-8 text-center text-gray-500 text-sm border-t border-white/10">
+    © 2025 Asafati Gea — Data-Driven Digital Identity
 </footer>
 
-<!-- SCRIPT HAMBURGER -->
+<!-- SCRIPT -->
 <script>
-    const mobileBtn = document.getElementById('mobile-menu-btn');
+    // Mobile menu toggle with animation
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileBtn.addEventListener('click', () => {
+    
+    mobileMenuBtn.onclick = () => {
         mobileMenu.classList.toggle('hidden');
+        if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('show');
+        }
+    };
+
+    // Scroll effect for header
+    let lastScroll = 0;
+    const header = document.querySelector('header');
+    
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 100) {
+            header.style.padding = '10px 0';
+        } else {
+            header.style.padding = '20px 0';
+        }
+        
+        lastScroll = currentScroll;
     });
 </script>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,id,zh-CN,es,fr,de,ja,ko,ar,ru,pt,hi',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+  
+  // For mobile
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,id,zh-CN,es,fr,de,ja,ko,ar,ru,pt,hi',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element_mobile');
+}
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
