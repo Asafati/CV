@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience | Asafati Gea</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#020617',
+            secondary: '#2563eb',
+            glow: '#38bdf8',
+          },
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            glow: '0 0 40px rgba(56,189,248,0.35)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter bg-gradient-to-br from-slate-950 via-slate-900 to-black text-gray-200 overflow-x-hidden">
+
+<!-- NAVBAR -->
+<header class="fixed top-0 w-full z-50 backdrop-blur bg-black/40 border-b border-white/10">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-extrabold tracking-wide text-white">
+            My <span class="text-glow">Curriculum Vitae</span>
+        </h1>
+
+        <!-- Menu Desktop -->
+        <ul class="hidden md:flex gap-8 text-sm uppercase tracking-widest">
+            <li><a href="../index/index.html" class="hover:text-glow">Home</a></li>
+            <li><a href="../about/about.html" class="hover:text-glow">About</a></li>
+            <li><a href="../education/education.html" class="hover:text-glow">Education</a></li>
+            <li><a href="../skills/skills.html" class="hover:text-glow">Skills</a></li>
+            <li><a href="../projects/projects.html" class="hover:text-glow">Projects</a></li>
+            <li><a href="../certificates/certificates.html" class="hover:text-glow">Certificates</a></li>
+            <li><a href="../contact/contact.html" class="hover:text-glow">Contact</a></li>
+        </ul>
+
+        <!-- Hamburger Menu Mobile -->
+        <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2">
+            <span class="w-6 h-0.5 bg-white"></span>
+            <span class="w-6 h-0.5 bg-white"></span>
+            <span class="w-6 h-0.5 bg-white"></span>
+        </button>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <ul id="mobile-menu" class="hidden flex-col gap-4 px-6 pb-4 bg-black/80 border-t border-white/10 md:hidden">
+        <li><a href="../index/index.html" class="block py-2 text-white hover:text-glow">Home</a></li>
+        <li><a href="../about/about.html" class="block py-2 text-white hover:text-glow">About</a></li>
+        <li><a href="../education/education.html" class="block py-2 text-white hover:text-glow">Education</a></li>
+        <li><a href="../skills/skills.html" class="block py-2 text-white hover:text-glow">Skills</a></li>
+        <li><a href="../projects/projects.html" class="block py-2 text-white hover:text-glow">Projects</a></li>
+        <li><a href="../certificates/certificates.html" class="block py-2 text-white hover:text-glow">Certificates</a></li>
+        <li><a href="../contact/contact.html" class="block py-2 text-white hover:text-glow">Contact</a></li>
+    </ul>
+</header>
+
+<!-- EXPERIENCE CONTENT -->
+<section class="pt-32 px-6 min-h-screen max-w-4xl mx-auto">
+  <h1 class="text-4xl font-bold text-white mb-6">Experience</h1>
+  <ul class="list-disc list-inside text-gray-300 mb-6">
+    <li>Panitia kegiatan kampus</li>
+    <li>Project web sederhana</li>
+  </ul>
+  <a href="../index/index.html" class="inline-block px-6 py-3 bg-glow text-black font-semibold rounded-xl hover:scale-105 transition shadow-glow">
+    ← Back to Home
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-8 text-center text-gray-500 text-sm bg-black border-t border-white/10">
+  © 2025 Asafati Gea — Building Digital Experience
+</footer>
+
+<!-- SCRIPT HAMBURGER -->
+<script>
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+</body>
+</html>
