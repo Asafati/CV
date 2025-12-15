@@ -47,9 +47,9 @@
         <li><a href="index.html" class="hover:text-glow">Home</a></li>
         <li><a href="about.html" class="hover:text-glow">About</a></li>
         <li><a href="education.html" class="hover:text-glow">Education</a></li>
-        <li><a href="experience.html" class="hover:teks-glow">Experience</a></li>
+        <li><a href="experience.html" class="hover:text-glow">Experience</a></li>
         <li><a href="skills.html" class="hover:text-glow">Skills</a></li>
-        <li><a href="projects.html" class="hover:text-glow">Projects</a></li>
+        <li><a href="projects.html" class="hover:text-glow font-bold text-glow">Projects</a></li>
         <li><a href="certificates.html" class="hover:text-glow">Certificates</a></li>
         <li><a href="contact.html" class="hover:text-glow">Contact</a></li>
     </ul>
@@ -62,15 +62,14 @@
     </button>
 </nav>
 
-
 <!-- Mobile Menu -->
 <ul id="mobile-menu" class="hidden flex-col gap-4 px-6 pb-4 bg-black/80 border-t border-white/10 md:hidden">
     <li><a href="index.html" class="block py-2 hover:text-glow">Home</a></li>
     <li><a href="about.html" class="block py-2 hover:text-glow">About</a></li>
     <li><a href="education.html" class="block py-2 hover:text-glow">Education</a></li>
-    <li><a href="experience.html" class="block py-2 hover:text-glow font-bold text-glow">Experience</a></li>
+    <li><a href="experience.html" class="block py-2 hover:text-glow">Experience</a></li>
     <li><a href="skills.html" class="block py-2 hover:text-glow">Skills</a></li>
-    <li><a href="projects.html" class="block py-2 hover:text-glow">Projects</a></li>
+    <li><a href="projects.html" class="block py-2 hover:text-glow font-bold text-glow">Projects</a></li>
     <li><a href="certificates.html" class="block py-2 hover:text-glow">Certificates</a></li>
     <li><a href="contact.html" class="block py-2 hover:text-glow">Contact</a></li>
 </ul>
@@ -98,7 +97,7 @@
             <!-- PROJECT 1 -->
             <div class="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-glow transition">
                 <div class="relative overflow-hidden">
-                    <img src="img/projects/cv.png" alt="CV Website" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
+                    <img src="img/projek1.png" alt="CV Website" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition"></div>
                 </div>
                 <div class="p-8">
@@ -111,9 +110,14 @@
                         <span class="px-3 py-1 text-sm bg-white/10 rounded-full">Tailwind CSS</span>
                         <span class="px-3 py-1 text-sm bg-white/10 rounded-full">JavaScript</span>
                     </div>
-                    <a href="https://github.com/Asafati" target="_blank" class="inline-block px-6 py-3 rounded-xl font-semibold bg-glow text-black hover:scale-105 transition shadow-glow">
-                        View on GitHub →
-                    </a>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/Asafati/MY-WEBSITE" target="_blank" class="inline-block px-6 py-3 rounded-xl font-semibold bg-glow text-black hover:scale-105 transition shadow-glow">
+                            View on GitHub →
+                        </a>
+                        <a href="https://my-website-opal-theta.vercel.app/" target="_blank" class="inline-block px-6 py-3 rounded-xl font-semibold bg-glow text-black hover:scale-105 transition shadow-glow">
+                            View Live Project →
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -176,11 +180,12 @@
 
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-</body>
 <!-- GOOGLE TRANSLATE BAR -->
-    <div class="w-full border-t border-white/10 bg-black/60">
-        <div class="max-w-7xl mx-auto px-6 py-2 flex justify-end">
-            <div id="google_translate_element"></div>
-        </div>
+<div class="w-full border-t border-white/10 bg-black/60">
+    <div class="max-w-7xl mx-auto px-6 py-2 flex justify-end">
+        <div id="google_translate_element"></div>
     </div>
+</div>
+
+</body>
 </html>
